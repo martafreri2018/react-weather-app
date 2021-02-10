@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 
-export default function Weather (){
+export default function Weather (props){
     
-    const [weatherData, setWeatherData] = useState ({ready:false});
+    const [weatherData, setWeatherData] = useState ({ ready: false });
     function handleResponse (response){
-        console.log(response.data);
         setWeatherData ({
             ready: true,
             temperature: response.data.main.temp,
@@ -16,11 +15,7 @@ export default function Weather (){
             iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
             wind: response.data.wind.speed,
             city: response.data.main.name
-            
-        
     });
-
-    
 }
 
     if (weatherData.ready) {
@@ -63,9 +58,8 @@ export default function Weather (){
     </div>
     ); 
 } else {
-        const apiKey="329ed4c9b33de1b60e6d184aac65a30a";
-    let city="Rome";
-    let apiUrl=`http://api.openweathermap.org/data/2.5/weather?q=${city},uk&appid=${apiKey}&units=metric`;
+    const apiKey="329ed4c9b33de1b60e6d184aac65a30a";
+    let apiUrl=`http://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
     return "Loading..."; 
     }
