@@ -27,6 +27,12 @@
   color: #495057;
 }
 
+.Weather canvas {
+  margin-right: 10px;
+  margin-top: 5px;
+  display: inline-block;
+}
+
 .Weather img {
   margin-right: 10px;
   height: 64px;
