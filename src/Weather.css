@@ -4,6 +4,7 @@
   font-family: "Varela Round", sans-serif;
   padding: 16px;
   margin: 30px auto;
+  background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
 }
 
 .Weather h1 {
@@ -29,15 +30,6 @@
 
 .Weather canvas {
   margin-right: 10px auto;
-  margin-top: 5px;
-  display: inline-block;
-}
-
-.Weather img {
-  margin-right: 10px;
-  height: 64px;
-  display: inline-block;
-  width: 64px;
 }
 
 .Weather .temperature {
