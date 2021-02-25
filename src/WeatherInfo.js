@@ -3,6 +3,7 @@ import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
 
+
 export default function WeatherInfo (props) {
     return (
         <div className="WeatherInfo">
@@ -28,7 +29,7 @@ export default function WeatherInfo (props) {
                 <ul>
                     
                     <li>Humidity: {props.data.humidity}%</li>
-                    <li>Wind: {Math.round(props.data.wind)} km/h</li>
+                    <li>Wind: {Math.round(props.data.wind)} km/h</li> 
                 </ul>
             
             </div>
